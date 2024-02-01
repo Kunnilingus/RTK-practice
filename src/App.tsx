@@ -4,6 +4,7 @@ import TodoList from "./components/TodoList";
 import InputField from "./components/InputField";
 import { useAppDispatch } from "./hooks/hooks";
 import { addTodo } from "./store/todoSlice";
+import { Link } from "react-router-dom";
 
 function App() {
   const [text, setText] = useState<string>("");
@@ -28,6 +29,7 @@ function App() {
   };
   return (
     <div className="App">
+      <Link to="/goods">Go to goods page</Link>
       <InputField text={text} handleText={setText} addTodo={addTask} />
       <TodoList />
     </div>
